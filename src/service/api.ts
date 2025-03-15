@@ -1,11 +1,7 @@
 import axios from "axios";
 
-const axiosWithConfig = axios.create();
-
-axiosWithConfig.interceptors.request.use((axiosConfig: any) => {
-  axiosConfig.baseURL = "https://pokeapi.co/api/v2/";
-
-  return axiosConfig;
+const axiosWithConfig = axios.create({
+  baseURL: "https://pokeapi.co/api/v2",
 });
 
 export default axiosWithConfig;
